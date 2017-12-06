@@ -5,8 +5,9 @@ import Gate from './components/Gate';
 import Chocolate from './components/Chocolate';
 import Inventing from './components/Inventing';
 import Staff from './components/Staff';
+import './styles/App.css';
+import styles from './styles/App.scss';
 
-import './App.css';
 
 class App extends Component {
   
@@ -15,13 +16,11 @@ class App extends Component {
     this.state = {
       inventory: [],
       room: 0
-      // rooms: []
     };
   }
 
   handleInventory = item => {
     const inventory = this.state.room ===3 ? [] : [ ...this.state.inventory ];
-    console.log(inventory);
     inventory.push(item);
     this.setState({
       inventory
